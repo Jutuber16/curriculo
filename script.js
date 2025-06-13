@@ -15,8 +15,8 @@ END:VCARD
 document.addEventListener('DOMContentLoaded', function() {
     new QRCode(document.getElementById("qrcode"), {
         text: contactInfo,
-        width: 200,
-        height: 200,
+        width: 20,
+        height: 20,
         colorDark: "#000000",
         colorLight: "#ffffff",
         correctLevel: QRCode.CorrectLevel.H
