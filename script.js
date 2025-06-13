@@ -1,5 +1,5 @@
 document.getElementysByTagName("h1")
-[0].style.fontSize="6vw";
+[0].style.fontSize="1vw";
 // Contact information to encode in QR code
 const contactInfo = `
 BEGIN:VCARD
