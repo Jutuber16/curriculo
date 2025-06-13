@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Juliano Gustavo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .contact-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dados de Contato</h1>
+    <div class="contact-card" id="contact-data">
+        <!-- Os dados serão inseridos via JavaScript -->
+    </div>
+
+    <script>
+        // Pega os parâmetros da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Exibe os dados na página
+        document.getElementById('contact-data').innerHTML = `
+            <h2>${decodeURIComponent(urlParams.get('name'))}</h2>
+            <p><strong>Endereço:</strong> ${decodeURIComponent(urlParams.get('address'))}</p>
+            <p><strong>E-mail:</strong> <a href="mailto:${decodeURIComponent(urlParams.get('email'))}">
+                ${decodeURIComponent(urlParams.get('email'))}
+            </a></p>
+        `;
+    </script>
+</body>
+</html>
